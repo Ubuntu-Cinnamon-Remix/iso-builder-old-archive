@@ -3,3 +3,7 @@
 Tue, 18 Aug 2020 20:01:15 -0400
 Reason: Possible Debian Build error
 Urgency: Medium
+
+Wed, 19 Aug 2020 19:36:28 -0400
+Reason: Debian Image failure from yesterday may have been confirmed. Final testing, as also was trying to build for arm64 tests.
+Urgency: Medium
