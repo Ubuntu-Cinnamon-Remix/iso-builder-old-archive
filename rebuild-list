@@ -11,3 +11,7 @@ Urgency: Medium
 Wed, 19 Aug 2020 19:38:68 -0400
 Reason: Confirmed: Debian Image is broken. Revert last commit.
 Urgency: High
+
+Wed, 19 Aug 2020 23:30:47 -0400
+Reason: Ubiquity Switch/Testing. Keeping Calamares just-in-case.
+Urgency: Medium
