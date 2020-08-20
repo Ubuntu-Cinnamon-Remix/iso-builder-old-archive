@@ -15,3 +15,7 @@ Urgency: High
 Wed, 19 Aug 2020 23:30:47 -0400
 Reason: Ubiquity Switch/Testing. Keeping Calamares just-in-case.
 Urgency: Medium
+
+Wed, 19 Aug 2020 23:49:47 -0400
+Reason: fwupdate-signed -> fwupdate. Was already mentioned so removed/fixed.
+Urgency: Low
