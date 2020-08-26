@@ -14,7 +14,6 @@ shim
 ntfs-3g
 lvm2
 dmraid
-ubiquity-frontend-gtk
 wamerican
 fwupdate
 mokutil
@@ -22,6 +21,4 @@ qml-module-qtquick-dialogs
 qml-module-qtquick-controls
 qml-module-qtquick-layouts
 qml-module-qtquick-window2
-ubiquity-frontend-gtk
-ubiquity-frontend-gtk-panel
 zram-config
