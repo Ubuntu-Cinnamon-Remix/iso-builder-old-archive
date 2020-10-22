@@ -1,4 +1,4 @@
-name: Ubuntu Cinnamon Remix 20.10 Groovy Release Candidates
+name: Ubuntu Cinnamon Remix 20.10 Groovy Release
 
 on:
   push:
@@ -35,5 +35,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Ubuntu Cinnamon Remix 20.10 Release Candidates
+        name: Ubuntu Cinnamon Remix 20.10 Release
         path: /iso-builder/builds/amd64
