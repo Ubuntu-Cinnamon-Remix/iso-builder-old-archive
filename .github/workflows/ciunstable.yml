@@ -24,7 +24,7 @@ jobs:
     - name: Copy debootstrap scripts to distro
       run: |
         cd /usr/share/debootstrap/scripts
-        cp disco groovy
+        cp disco hirsute
 
     - name: Build ISO
       run: |
