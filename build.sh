@@ -91,9 +91,6 @@ build () {
   cd $BASE_DIR
 }
 
-# remove old builds before creating new ones
-rm -rf "$BASE_DIR"/builds
-
 if [[ "$ARCH" == "all" ]]; then
     build amd64
 else
