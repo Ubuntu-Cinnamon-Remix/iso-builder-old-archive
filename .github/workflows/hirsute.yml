@@ -21,17 +21,11 @@ jobs:
     - name: Install debootstrap/git
       run: apt update && apt install git debootstrap -y
 
-    - name: Copy debootstrap scripts to distro
-      run: |
-        cd /usr/share/debootstrap/scripts
-        cp disco hirsute
-
     - name: Build ISO
       run: |
-        cd /
         git clone https://github.com/Ubuntu-Cinnamon-Remix/iso-builder
         cd iso-builder
-        ./build.sh
+        ./build.sh etc/terraform.conf
 
     - uses: actions/upload-artifact@v2
       with:
