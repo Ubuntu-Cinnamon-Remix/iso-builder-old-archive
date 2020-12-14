@@ -23,6 +23,7 @@ jobs:
 
     - name: Build ISO
       run: |
+        cd /
         git clone https://github.com/Ubuntu-Cinnamon-Remix/iso-builder
         cd iso-builder
         ./build.sh etc/terraform.conf
@@ -30,4 +31,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: Ubuntu Cinnamon Remix 21.04 Hirsute (development branch) Daily
-        path: /iso-builder/builds/amd64
+        path: /iso-builder/builds/
