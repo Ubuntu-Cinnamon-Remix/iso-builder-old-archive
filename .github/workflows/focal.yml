@@ -1,4 +1,4 @@
-name: Ubuntu Cinnamon Remix 20.04.2 Focal Daily
+name: Ubuntu Cinnamon Remix 20.04.3 Focal Daily
 
 on:
   push:
@@ -36,5 +36,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Ubuntu Cinnamon Remix 20.04.2 Focal Daily
+        name: Ubuntu Cinnamon Remix 20.04.3 Focal Daily
         path: /iso-builder/builds/
