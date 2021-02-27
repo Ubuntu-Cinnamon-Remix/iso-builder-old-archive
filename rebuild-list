@@ -1,5 +1,9 @@
 # List of rebuilds in case anything goes wrong or anything happens
 
+Sat, 27 Feb 2021 11:35:29 -0500
+Switch to calamares, feature freeze
+Urgency: Medium
+
 Tue, 18 Aug 2020 20:01:15 -0400
 Reason: Possible Debian Build error
 Urgency: Medium
