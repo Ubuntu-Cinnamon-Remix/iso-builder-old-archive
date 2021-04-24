@@ -1,4 +1,4 @@
-name: Ubuntu Cinnamon Remix 21.04 Hirsute (development branch) Daily
+name: Ubuntu Cinnamon Remix 21.10 Impish (development branch) Daily
 
 on:
   push:
@@ -30,5 +30,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Ubuntu Cinnamon Remix 21.04 Hirsute (development branch) Daily
+        name: Ubuntu Cinnamon Remix 21.10 Impish (development branch) Daily
         path: /iso-builder/builds/
