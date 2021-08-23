@@ -21,12 +21,6 @@ jobs:
     - name: Install debootstrap/git
       run: apt update && apt install git debootstrap -y
 
-    - name: Copy debootstrap scripts to distro
-      run: |
-        cd /usr/share/debootstrap/scripts
-        cp disco focal
-
-
     - name: Build ISO
       run: |
         cd /
