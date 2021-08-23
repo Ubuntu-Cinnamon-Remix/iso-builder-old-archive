@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install debootstrap/git
-      run: apt update && apt install git debootstrap -y
+      run: apt update && apt install git debootstrap live-build -y
 
     - name: Build ISO
       run: |
