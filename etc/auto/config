@@ -33,7 +33,7 @@ lb config noauto \
     --apt-source-archives false \
     --parent-mirror-binary "http://archive.ubuntu.com/ubuntu/" \
     --keyring-packages ubuntu-keyring \
-    --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
+    --apt-options "--yes --allow-remove-essential --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
     --uefi-secure-boot enable \
     --binary-images iso-hybrid \
     --iso-application "$NAME" \
