@@ -16,6 +16,7 @@ lb config noauto \
     --architectures "$ARCH" \
     --mode ubuntu \
     --initramfs none \
+    --initsystem none \
     --distribution "$BASECODENAME" \
     --parent-distribution "$BASECODENAME" \
     --archive-areas "main restricted universe multiverse" \
@@ -23,6 +24,8 @@ lb config noauto \
     --linux-packages linux-image \
     --linux-flavours "$KERNEL_FLAVORS" \
     --bootappend-live "boot=casper maybe-ubiquity quiet splash" \
+    --bootstrap-keyring ubuntu-keyring \
+    --build-with-chroot false \
     --mirror-bootstrap "$MIRROR_URL" \
     --parent-mirror-bootstrap "$MIRROR_URL" \
     --mirror-chroot-security "http://security.ubuntu.com/ubuntu/" \
@@ -33,6 +36,7 @@ lb config noauto \
     --parent-mirror-binary "http://archive.ubuntu.com/ubuntu/" \
     --keyring-packages ubuntu-keyring \
     --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
+    --apt-source-archives false \
     --cache false \
     --cache-packages false \
     --cache-stages false \
