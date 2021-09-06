@@ -24,7 +24,6 @@ lb config noauto \
     --linux-packages linux-image \
     --linux-flavours "$KERNEL_FLAVORS" \
     --bootappend-live "boot=casper maybe-ubiquity quiet splash" \
-    --bootstrap-keyring ubuntu-keyring \
     --build-with-chroot false \
     --mirror-bootstrap "$MIRROR_URL" \
     --parent-mirror-bootstrap "$MIRROR_URL" \
