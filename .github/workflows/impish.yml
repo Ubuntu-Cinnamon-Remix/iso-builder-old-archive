@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     container:
-      image: debian:experimental
+      image: debian:latest
       options: --privileged -it
 
     steps:
