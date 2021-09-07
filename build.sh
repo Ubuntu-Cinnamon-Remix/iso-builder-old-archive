@@ -29,7 +29,7 @@ apt-get install -y ./ubuntu-keyring_2020.02.11.4_all.deb
 
 # TODO: Remove this once debootstrap 1.0.117 or newer is released and available:
 # https://salsa.debian.org/installer-team/debootstrap/blob/master/debian/changelog
-ln -sfn /usr/share/debootstrap/scripts/gutsy /usr/share/debootstrap/scripts/impish
+ln -sfn /usr/share/debootstrap/scripts/focal /usr/share/debootstrap/scripts/impish
 
 # TODO: Remove once live-build is able to acommodate for cases where LB_INITRAMFS is not live-boot:
 # https://salsa.debian.org/live-team/live-build/merge_requests/31
@@ -48,7 +48,7 @@ build () {
   cp -f "$BASE_DIR"/"$CONFIG_FILE" terraform.conf
 
   # Symlink chosen package lists to where live-build will find them
-  ln -s "package-lists.$PACKAGE_LISTS_SUFFIX" "config/package-lists"
+  #ln -s "package-lists.$PACKAGE_LISTS_SUFFIX" "config/package-lists"
 
   echo -e "
 #------------------#
