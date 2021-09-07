@@ -12,19 +12,18 @@ else
     KERNEL_FLAVORS="generic"
 fi
 
+
 lb config noauto \
     --architectures "$ARCH" \
     --mode ubuntu \
-    --initramfs live-boot \
-    --initsystem none \
+    --initramfs none \
     --distribution "$BASECODENAME" \
     --parent-distribution "$BASECODENAME" \
     --archive-areas "main restricted universe multiverse" \
     --parent-archive-areas "main restricted universe multiverse" \
     --linux-packages linux-image \
     --linux-flavours "$KERNEL_FLAVORS" \
-    --bootappend-live "boot=casper maybe-ubiquity quiet splash" \
-    --build-with-chroot false \
+    --bootappend-live "boot=casper quiet splash" \
     --mirror-bootstrap "$MIRROR_URL" \
     --parent-mirror-bootstrap "$MIRROR_URL" \
     --mirror-chroot-security "http://security.ubuntu.com/ubuntu/" \
@@ -32,13 +31,10 @@ lb config noauto \
     --mirror-binary-security "http://security.ubuntu.com/ubuntu/" \
     --parent-mirror-binary-security "http://security.ubuntu.com/ubuntu/" \
     --mirror-binary "http://archive.ubuntu.com/ubuntu/" \
+    --apt-source-archives false \
     --parent-mirror-binary "http://archive.ubuntu.com/ubuntu/" \
     --keyring-packages ubuntu-keyring \
-    --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
-    --apt-source-archives false \
-    --cache false \
-    --cache-packages false \
-    --cache-stages false \
+    --apt-options "--yes --allow-remove-essential --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
     --uefi-secure-boot enable \
     --binary-images iso-hybrid \
     --iso-application "$NAME" \
@@ -48,10 +44,7 @@ lb config noauto \
     --zsync false \
     --security true \
     --updates true \
-    --debootstrap-options "--exclude=pinephone-tweaks,mobile-tweaks-common,librem5-tweaks,pinetab-tweaks" \
-    --verbose \
     "${@}"
-
 
 # replace channel and suite
 sed -i "s/@CHANNEL/$CHANNEL/" config/archives/*.list*
